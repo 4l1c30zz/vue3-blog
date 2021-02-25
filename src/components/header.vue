@@ -1,5 +1,8 @@
 <template>
-  <header>
+  <header class="flex-between">
+    <div class="logo">
+      siteLogo
+    </div>
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>

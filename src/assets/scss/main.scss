@@ -1,6 +1,75 @@
 @import "reset";
 
 
-body{
-  background: color(_magenta);
+body {
+  background: color(raisin_black);
+  font-size: 18px;
+  line-height: 1.2em;
 }
+header,
+footer {
+  padding: 2%;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+/*container-styles*/
+.container{
+  padding: 5%;
+  max-width: 1200px;
+}
+.container.is-fluid{
+  max-width: 100%;
+}
+/*end-container-styles*/
+
+/*flex-helpers*/
+.flex-center {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flex-between {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+/*end-flex-helpers*/
+
+/*columns styles*/
+.column {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  align-content: center;
+}
+.is-full {
+  flex-basis: 100%;
+}
+.is-half {
+  flex-basis: 50%;
+}
+.is-three {
+  flex-basis: 33.33%;
+}
+.is-four {
+  flex-basis: 25%;
+}
+/*end columns styles*/
+/*text-helpers*/
+.is-center{
+  text-align: center;
+}
+.is-right {
+  text-align: right;
+}
+.is-left {
+  text-align: left;
+}
+/*end text-helpers*/
+
