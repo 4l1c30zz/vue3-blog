@@ -1,8 +1,6 @@
 @import "reset";
-@import "_variables";
-@import "_functions";
-@import "_mixins";
+
 
 body{
-  background: magenta;
+  background: color(_magenta);
 }
