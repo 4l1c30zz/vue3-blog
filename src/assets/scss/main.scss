@@ -11,7 +11,7 @@ footer {
   box-shadow: 0;
   padding: 2%;
   background: color(raisin_black);
-  color: color(french_violet);
+  color: white;
   transition: all ease-in-out 0.3s;
   z-index: 10;
 
@@ -20,7 +20,18 @@ footer {
       0 0 1rem color(hot_pink),
   }
 }
-
+#nav a{
+  padding: 0 0.5em;
+  border-bottom: 2px solid transparent;
+  border-radius: 5%;
+  transition: all ease 0.3s;
+  font-weight: 900;
+  &:hover{
+      color: color(hot_pink);
+      border-color: color(hot_pink);
+      padding: 0.5em;
+  }
+}
 #app {
   width: 100%;
   height: 100%;
@@ -68,17 +79,19 @@ h4 {
 /*end-container-styles*/
 
 /*flex-helpers*/
-.flex-center {
+.flex {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
 }
-
+.flex-center {
+  justify-content: center;
+}
 .flex-between {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+}
+.flex-start {
+  justify-content: flex-start;
 }
 
 /*end-flex-helpers*/
@@ -87,10 +100,6 @@ h4 {
 .column {
   flex-grow: 1;
   flex-shrink: 1;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
   padding: 3%;
 }
 
