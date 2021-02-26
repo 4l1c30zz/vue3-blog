@@ -43,6 +43,12 @@
       />
     </div>
   </div>
+    <div class="flex flex-center container">
+    <div class="column is-full flex flex-start">
+      <h2 class="is-uppercase is-full">Unrelated Art</h2>
+        {{homePage}}
+    </div>
+  </div>
 </template>
 <script>
 import { mapGetters } from 'vuex';
@@ -56,6 +62,7 @@ export default {
   computed: {
     ...mapGetters({
       posts: 'getBlog',
+      homePage: 'getHomePage',
     }),
   },
 };
