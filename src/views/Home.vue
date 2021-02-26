@@ -19,9 +19,8 @@
   </div>
   <div class="flex flex-center container">
     <div class="column is-full flex flex-start">
-      <h2 class="is-uppercase">skills</h2>
-      <div>
-        <p class="is-left">
+      <h2 class="is-uppercase is-full"><b>| </b>skills</h2>
+        <p class="is-left is-full">
        <b> Frontend:</b> [ Common: <br/>[ HTML, CSS, SCSS, ], JS: <br/>[ jQuery, Handlebars.js,
         Anime.js, Axios, Apollo ,Cypress ] Frameworks: <br/>[ Vue.js, Vuex] ],
         </p>
@@ -36,7 +35,6 @@
         </p>
       </div>
     </div>
-  </div>
 </template>
 <script>
 export default {
