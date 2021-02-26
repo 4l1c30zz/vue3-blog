@@ -19,24 +19,27 @@
   </div>
   <div class="flex flex-center container">
     <div class="column is-full flex flex-start">
-      <h2 class="is-uppercase is-full"><b>| </b>skills</h2>
+      <h2 class="is-uppercase is-full">skills</h2>
       <p class="is-left is-full">
-        <b> Frontend:</b> [ Common: <br />[ HTML, CSS, SCSS, ], JS: <br />[
+        <b>{ Frontend:</b><br/>[<b>Common: </b><br />[ HTML, CSS, SCSS, ], JS: <br />[
         jQuery, Handlebars.js, Anime.js, Axios, Apollo ,Cypress ] Frameworks:
         <br />[ Vue.js, Vuex] ],
       </p>
-      <p class="is-left">
-        <b> Backend: </b> [ PHP, mySQL, Smarty, Strapi, ],<br />
-        Frameworks:<br />[ WordPress ],
+      <p class="is-left is-full">
+        <b>Backend: </b><br/>[ PHP, mySQL, Smarty, Strapi, ],
       </p>
-      <p class="is-left">
-        <b>Design: </b>[ Figma, Adobe XD, Adobe Photoshop, Adobe Illustrator ],
+      <p class="is-left is-full">
+        <b>Frameworks:</b><br />[ WordPress ],
       </p>
-      <p class="is-left"><b> Misc: </b>[Ubuntu, bash, Git ]</p>
+      <p class="is-left is-full">
+        <b>Design: </b><br/>[ Figma, Adobe XD, Adobe Photoshop, Adobe Illustrator ],
+      </p>
+      <p class="is-left is-full">
+        <b> Misc: </b><br/>[Ubuntu, bash, Git ]<br/><b>}</b></p>
     </div>
   </div>
-  <div class="flex flex-center container">
-    <div class="column is-full flex flex-start">
+  <div class="flex flex-center blog-wrapper">
+    <div class="container flex flex-start">
       <h2 class="is-uppercase is-full">Development</h2>
       <postsGrid
         :posts="this.posts"
