@@ -1,15 +1,18 @@
 <template>
   <Header />
   <router-view />
+  <Footer />
 </template>
 <script>
 import { mapGetters } from 'vuex';
 import Header from '@/components/header.vue';
+import Footer from '@/components/footer.vue';
 import BlogService from '@/services/BlogService';
 
 export default {
   components: {
     Header,
+    Footer,
   },
   mounted() {
     if (!this.homePage) {
