@@ -47,11 +47,11 @@ const BlogService = {
     }
   }
 }
-
               `,
       },
     }).then((result) => {
-      store.commit('setHome', { homePage: result.data.data.pages });
+      const pageObject = { ...result.data.data.pages };
+      store.commit('setHome', { homePage: pageObject[0] });
     });
   },
   async getPosts() {

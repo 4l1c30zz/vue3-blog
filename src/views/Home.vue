@@ -46,18 +46,22 @@
     <div class="flex flex-center container">
     <div class="column is-full flex flex-start">
       <h2 class="is-uppercase is-full">Unrelated Art</h2>
-        {{homePage}}
+        <galleryGrid
+        :galleryItems="homePage?.gallery.items"
+         />
     </div>
   </div>
 </template>
 <script>
 import { mapGetters } from 'vuex';
 import postsGrid from '@/components/postsGrid.vue';
+import galleryGrid from '@/components/galleryGrid.vue';
 
 export default {
   name: 'Home',
   components: {
     postsGrid,
+    galleryGrid,
   },
   computed: {
     ...mapGetters({
