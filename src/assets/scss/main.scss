@@ -27,6 +27,7 @@ footer {
   display: flex;
   align-content: center;
   flex-direction: column;
+  justify-content: center;
 }
 
 /*app header styles*/
@@ -47,6 +48,7 @@ footer {
   &:hover {
     color: color(__turquoise);
     transform: scale(1.1);
+
     &:after {
       height: 3px;
       background: $gradient1;
@@ -104,8 +106,9 @@ h4 {
 /*end heading styles*/
 /*container-styles*/
 .container {
-  padding: 5%;
+  padding: 1%;
   max-width: 1200px;
+  margin: 0 auto;
 }
 
 .container.is-fluid {
@@ -151,12 +154,9 @@ h4 {
 }
 
 .is-three {
-  flex-basis: 33.33%;
+  flex-basis: 26%;
 }
 
-.is-four {
-  flex-basis: 25%;
-}
 
 /*end columns styles*/
 
@@ -189,6 +189,7 @@ h4 {
   margin-bottom: 0.8em;
   padding: 0.5em;
 }
+
 /*end hero-section*/
 
 /*welcome neon sign styles*/
@@ -265,3 +266,14 @@ h4 {
 }
 
 /*end welcome neon sign styles*/
+/*posts grid style*/
+.post {
+  &.column {
+    padding: 1%;
+  }
+  .post-content {
+    border: 5px solid color(raisin_black);
+  }
+}
+
+/*end posts grid style*/
