@@ -35,8 +35,8 @@ footer {
   stroke-width: 2px;
   fill: color(hot_pink);
   filter: drop-shadow(0 5px 1px color(french_violet));
-  min-width: 7vw;
-  max-width: 8vw;
+  min-width: 6vw;
+  max-width: 7vw;
   transition: all 0.5s ease;
   &:hover{
     stroke-width: 0;
@@ -55,15 +55,16 @@ footer {
 }
 
 .header a {
+  font-size: 20px;
   padding: 0.5em;
   border-radius: 5%;
   font-weight: 900;
+  text-shadow: transparent;
   transition: all ease 0.5s;
-
+  text-transform: uppercase;
   &:hover {
-    color: color(__turquoise);
     transform: scale(1.1);
-
+    text-shadow: 0.1rem 0.1rem 2rem color(jonquil);
     &:after {
       height: 3px;
       background: $gradient1;
@@ -292,3 +293,19 @@ h4 {
 }
 
 /*end posts grid style*/
+
+/*gallery grid styles*/
+.gallery{
+  cursor: pointer;
+  padding: 0;
+  margin: 1%;
+  img{
+  max-height: 300px;
+  object-fit: cover;
+  width: 100%;
+  }
+  .gallery-heading{
+    padding: 1%;
+  }
+}
+/*gallery grid styles*/
