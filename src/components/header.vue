@@ -3,7 +3,7 @@
     <div class="logo">
       siteLogo
     </div>
-    <div id="nav">
+    <div id="nav" class="header flex flex-between">
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
     </div>

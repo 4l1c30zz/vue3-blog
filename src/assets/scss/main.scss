@@ -20,18 +20,7 @@ footer {
       0 0 1rem color(hot_pink),
   }
 }
-#nav a{
-  padding: 0 0.5em;
-  border-bottom: 2px solid transparent;
-  border-radius: 5%;
-  transition: all ease 0.3s;
-  font-weight: 900;
-  &:hover{
-      color: color(hot_pink);
-      border-color: color(hot_pink);
-      padding: 0.5em;
-  }
-}
+
 #app {
   width: 100%;
   height: 100%;
@@ -39,6 +28,53 @@ footer {
   align-content: center;
   flex-direction: column;
 }
+
+/*app header styles*/
+.header {
+  min-height: 60px;
+
+  .router-link-active {
+    color: color(hot_pink);
+  }
+}
+
+.header a {
+  padding: 0.5em;
+  border-radius: 5%;
+  font-weight: 900;
+  transition: all ease 0.5s;
+
+  &:hover {
+    color: color(__turquoise);
+    transform: scale(1.1);
+    &:after {
+      height: 3px;
+      background: $gradient1;
+      margin-top: 10px;
+      background-size: 400%;
+      animation: gradient_flow ease-in 3.3s infinite alternate-reverse;
+    }
+  }
+
+  &:after {
+    content: '';
+    height: 3px;
+    display: block;
+    background: transparent;
+  }
+}
+
+@keyframes gradient_flow {
+  0% {
+    background-position: 0%;
+  }
+
+  0% {
+    background-position: 100%;
+  }
+}
+
+/*end app header styles*/
 
 /*heading styles*/
 h1,
@@ -84,12 +120,15 @@ h4 {
   flex-wrap: wrap;
   align-items: center;
 }
+
 .flex-center {
   justify-content: center;
 }
+
 .flex-between {
   justify-content: space-between;
 }
+
 .flex-start {
   justify-content: flex-start;
 }
@@ -141,6 +180,18 @@ h4 {
 /*end text-helpers*/
 
 /*hero section*/
+.hero {
+  background: color(raisin_black);
+}
+
+.hero .hero-paragraph p {
+  background: white;
+  margin-bottom: 0.8em;
+  padding: 0.5em;
+}
+/*end hero-section*/
+
+/*welcome neon sign styles*/
 .neon-sign {
   font-size: 80px;
   line-height: 1em;
@@ -156,10 +207,10 @@ h4 {
     0 0 3rem color(hot_pink);
   box-shadow: 0 0 .5rem white,
     inset 0 0 0.5rem white,
-    0 0 1rem color(turquoise),
-    inset 0 0 1rem color(turquoise),
-    0 0 1rem color(turquoise),
-    inset 0 0 1rem color(turquoise);
+    0 0 1rem color(_turquoise),
+    inset 0 0 1rem color(_turquoise),
+    0 0 1rem color(_turquoise),
+    inset 0 0 1rem color(_turquoise);
   border: 5px solid white;
   border-radius: 5%;
   display: inline-block;
@@ -176,10 +227,10 @@ h4 {
       0 0 5rem color(hot_pink);
     box-shadow: 0 0 .5rem white,
       inset 0 0 0.5rem white,
-      0 0 1rem color(turquoise),
-      inset 0 0 1rem color(turquoise),
-      0 0 2rem color(turquoise),
-      inset 0 0 2rem color(turquoise);
+      0 0 1rem color(_turquoise),
+      inset 0 0 1rem color(_turquoise),
+      0 0 2rem color(_turquoise),
+      inset 0 0 2rem color(_turquoise);
     animation: none;
   }
 }
@@ -200,10 +251,10 @@ h4 {
       0 0 5rem color(hot_pink);
     box-shadow: 0 0 .5rem white,
       inset 0 0 0.5rem white,
-      0 0 1rem color(turquoise),
-      inset 0 0 1rem color(turquoise),
-      0 0 2rem color(turquoise),
-      inset 0 0 2rem color(turquoise);
+      0 0 1rem color(_turquoise),
+      inset 0 0 1rem color(_turquoise),
+      0 0 2rem color(_turquoise),
+      inset 0 0 2rem color(_turquoise);
   }
 
   20%,
@@ -213,14 +264,4 @@ h4 {
   }
 }
 
-.hero {
-  background: color(raisin_black);
-}
-
-.hero .hero-paragraph p {
-  background: white;
-  margin-bottom: 0.8em;
-  padding: 0.5em;
-}
-
-/*end hero-section*/
+/*end welcome neon sign styles*/
