@@ -1,9 +1,9 @@
 <template>
   <div class="flex flex-center container is-fluid hero">
-    <div class="column is-full flex flex-start">
+    <div class="column is-half flex flex-start">
       <h1 class="is-center is-uppercase neon-sign">Hey There</h1>
     </div>
-    <div class="column is-full hero-paragraph flex flex-start">
+    <div class="column is-half hero-paragraph flex flex-start">
       <p class="is-left">
         My name is Alice, I’m a Tel-Aviv based self-taught creative developer.
       </p>
@@ -40,7 +40,7 @@
   </div>
   <div class="flex flex-center blog-wrapper">
     <div class="container flex flex-start">
-      <h2 class="is-uppercase is-full">Development</h2>
+      <h2 class="is-uppercase is-full">Playground</h2>
       <postsGrid
         :posts="this.posts"
       />
