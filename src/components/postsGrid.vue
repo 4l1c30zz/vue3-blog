@@ -5,7 +5,7 @@
     :ref="setPostRef"
     v-bind:key="post"
   >
-        <div class="post-category">
+        <div class="post-category is-uppercase">
         {{ post.category.name }}
       </div>
     <div class="post-content flex flex-center flex-column">
