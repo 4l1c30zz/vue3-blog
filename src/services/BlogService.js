@@ -81,6 +81,8 @@ const BlogService = {
       },
     }).then((result) => {
       store.commit('setBlog', { blog: result.data.data.articles });
+      // const blogObject = { ...result.data.data.articles };
+      // store.commit('setBlog', { blog: blogObject[0] });
     });
   },
 };
