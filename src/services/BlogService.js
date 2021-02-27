@@ -80,7 +80,6 @@ const BlogService = {
         `,
       },
     }).then((result) => {
-      console.log('getPosts result.data', result.data);
       store.commit('setBlog', { blog: result.data.data.articles });
     });
   },
