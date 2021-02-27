@@ -5,9 +5,9 @@
     :ref="setPostRef"
     v-bind:key="post"
   >
-        <span class="post-category">
+        <div class="post-category">
         {{ post.category.name }}
-      </span>
+      </div>
     <div class="post-content flex flex-center flex-column">
       <img :src="env + post.image.url" class="post-thumbnail" />
       <div class="post-tech flex flex-center">
@@ -21,7 +21,7 @@
         </span>
       </div>
     </div>
-     <h3 class="post-title">{{ post.title }}</h3>
+     <h3 class="post-title is-center is-uppercase">{{ post.title }}</h3>
     <div class="post-toolbar flex flex-between">
       <a class="button" v-if="post.live" :href="post.live">live</a>
       <a class="button" v-if="post.git" :href="post.git">git</a>
