@@ -29,6 +29,7 @@ footer {
   flex-direction: column;
   justify-content: center;
 }
+
 /*logo*/
 .logo-svg {
   stroke: color(raisin_black);
@@ -38,12 +39,14 @@ footer {
   min-width: 6vw;
   max-width: 7vw;
   transition: all 0.5s ease;
-  &:hover{
+
+  &:hover {
     stroke-width: 0;
     transform: scale(1.2);
     filter: drop-shadow(-1vw -5px 0 color(jonquil)) drop-shadow(1vw 5px 0 color(french_violet));
   }
 }
+
 /**/
 /*app header styles*/
 .header {
@@ -63,12 +66,13 @@ footer {
   transition: all ease 0.5s;
   text-transform: uppercase;
   background: transparent;
+
   &:hover {
     transform: scale(1.1);
     text-shadow: 0.1rem 0.1rem 2rem color(jonquil);
-          // background: $gradient1;
-          // background-size: 400%;
-          // animation: gradient_flow ease-in 3.3s infinite alternate-reverse;
+    // background: $gradient1;
+    // background-size: 400%;
+    // animation: gradient_flow ease-in 3.3s infinite alternate-reverse;
   }
 
 }
@@ -131,6 +135,10 @@ h4 {
   align-items: center;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
 .flex-center {
   justify-content: center;
 }
@@ -185,7 +193,35 @@ h4 {
 }
 
 /*end text-helpers*/
+/*UI default elems*/
+.tag {
+  margin: 0.2em;
+  padding: 0.2em;
+  background: $gradient1;
+  font-weight: bold;
+}
 
+.button {
+  margin: 0.2em;
+  padding: 0.5em;
+  background: $gradient1;
+  font-weight: bold;
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  background-size: 100%;
+  box-shadow:none;
+  &:hover{
+    background-size: 400%;
+    animation: gradient_flow 6s ease-in infinite alternate;
+    transform: scale(1.1);
+    box-shadow: 0.1rem 0.1rem 5rem color(jonquil);
+  }
+}
+
+/*end UI default elems*/
 /*hero section*/
 .hero {
   background: color(raisin_black);
@@ -274,33 +310,49 @@ h4 {
 
 /*end welcome neon sign styles*/
 /*posts grid style*/
-.blog-wrapper{
+.blog-wrapper {
   background: color(raisin_black);
   color: white;
 }
+
 .post {
   &.column {
     padding: 1%;
   }
+
   .post-content {
     border: 5px solid color(raisin_black);
+    position: relative;
+  }
+
+  .post-title {
+    max-width: 30vw;
+  }
+
+  .post-tech {
+    position: absolute;
+    width: 100%;
+    height: 100%;
   }
 }
 
 /*end posts grid style*/
 
 /*gallery grid styles*/
-.gallery{
+.gallery {
   cursor: pointer;
   padding: 0;
   margin: 1%;
-  img{
-  max-height: 300px;
-  object-fit: cover;
-  width: 100%;
+
+  .gallery-image {
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
   }
-  .gallery-heading{
+
+  .gallery-heading {
     padding: 1%;
   }
 }
+
 /*gallery grid styles*/

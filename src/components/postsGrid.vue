@@ -1,16 +1,30 @@
 <template>
-  <article class="post column is-three" v-for="post in posts" :ref="postsRefs" v-bind:key="post">
-    <div class="post-content">
-    <span>
-      {{ post.category.name }}
-    </span>
-    <img :src="env + post.image.url" />
-    <p>{{ breakSentence(post.tech)}}</p>
-    <h3>{{ post.title }}</h3>
+  <article
+    class="post column is-three"
+    v-for="post in posts"
+    :ref="setPostRef"
+    v-bind:key="post"
+  >
+        <span class="post-category">
+        {{ post.category.name }}
+      </span>
+    <div class="post-content flex flex-center flex-column">
+      <img :src="env + post.image.url" class="post-thumbnail" />
+      <div class="post-tech flex flex-center">
+        <span
+        v-for="tech in splitSentence(post.tech)"
+        v-bind:key="tech"
+        :ref="setTechRef"
+        class="tag"
+        >
+         {{tech}}
+        </span>
+      </div>
     </div>
-    <div class="post-toolbar">
-      <a v-if="post.live" :href="post.live">live</a>
-      <a v-if="post.git" :href="post.git">git</a>
+     <h3 class="post-title">{{ post.title }}</h3>
+    <div class="post-toolbar flex flex-between">
+      <a class="button" v-if="post.live" :href="post.live">live</a>
+      <a class="button" v-if="post.git" :href="post.git">git</a>
     </div>
   </article>
 </template>
@@ -21,6 +35,7 @@ export default {
   data() {
     return {
       postsRefs: [],
+      techRefs: [],
       env: process.env.VUE_APP_API_URI,
     };
   },
@@ -30,8 +45,14 @@ export default {
         this.postsRefs.push(elem);
       }
     },
-    breakSentence(value) {
-      return value ? value.split(' ').filter(Boolean) : '';
+    setTechRef(elem) {
+      if (elem) {
+        this.techRefs.push(elem);
+      }
+    },
+    splitSentence(value) {
+      const postTech = value ? value.split(' ').filter(Boolean) : [];
+      return postTech;
     },
   },
 };

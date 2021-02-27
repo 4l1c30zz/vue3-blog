@@ -1,10 +1,10 @@
 <template>
   <div class="column is-three gallery"
-   v-for="galleryItem in galleryItems"
-    :ref="galleryItemRefs"
-     v-bind:key="galleryItem"
+      v-for="galleryItem in galleryItems"
+      :ref="setGalleryRefs"
+      v-bind:key="galleryItem"
      >
-     <img v-if="galleryItem.url" :src="env + galleryItem.url"/>
+     <img class="gallery-image" v-if="galleryItem.url" :src="env + galleryItem.url"/>
      <h4 class="gallery-heading" v-if="galleryItem.caption" >{{galleryItem.caption}}</h4>
   </div>
 </template>
