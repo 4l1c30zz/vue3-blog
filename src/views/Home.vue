@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-center container is-fluid hero">
-    <div class="column is-half flex flex-start">
+    <div class="column is-half flex flex-center">
       <h1 class="is-center is-uppercase neon-sign">Hey There</h1>
     </div>
     <div class="column is-half hero-paragraph flex flex-start">
