@@ -24,6 +24,12 @@
           {{ tech }}
         </span>
       </div>
+      <router-link
+      class="button"
+      :to="{ name: `blogSingle`, params: { id: post.id } }"
+      >
+       full txt
+      </router-link>
     </div>
     <h3 class="post-title is-center is-uppercase">{{ post.title }}</h3>
     <div class="post-toolbar flex flex-between">
