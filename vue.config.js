@@ -6,6 +6,7 @@ module.exports = {
           @import "@/assets/scss/_variables";
           @import "@/assets/scss/_functions";
           @import "@/assets/scss/_mixins";
+          @import "@/assets/scss/_keyframes";
           @import "@/assets/scss/reset.scss";
           @import "@/assets/scss/main.scss";
 
