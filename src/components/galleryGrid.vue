@@ -36,6 +36,7 @@ export default {
       return item ? this.galleryItemRefs.push(item) : false;
     },
     galleryItemSelected(e) {
+      document.querySelector('.gallery_wrap').classList.add('a');
       const targ = e.currentTarget;
       const targSiblings = [...targ.parentNode.children].filter(
         (sibling) => sibling !== targ,
@@ -74,6 +75,7 @@ export default {
           elem.classList.remove('a');
         });
       }
+      document.querySelector('.gallery_wrap').classList.remove('a');
     },
   },
 };
