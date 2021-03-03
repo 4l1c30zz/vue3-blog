@@ -48,7 +48,7 @@
   </div>
     <div class="flex flex-center container is-fluid">
     <div class="column is-full flex flex-start">
-      <h2 class="is-uppercase is-full">Unrelated Art</h2>
+      <h2 class="is-uppercase is-full">Some Art</h2>
         <galleryGrid
         :galleryItems="homePage?.gallery.items"
          />

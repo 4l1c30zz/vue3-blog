@@ -376,9 +376,9 @@ h4 {
     position   : fixed;
     font-size  : 30px;
     font-weight: 900;
-    padding: .35em;
-    background: color(hot_pink);
-    color: color(raisin_black);
+    padding    : .35em;
+    background : color(hot_pink);
+    color      : color(raisin_black);
   }
 
   .close,
@@ -399,6 +399,8 @@ h4 {
   }
 
   &.a {
+    z-index: 20;
+
     .close {
       left: 1%;
     }
@@ -434,19 +436,26 @@ h4 {
   }
 
   .gallery-heading {
-    padding: 1%;
+    padding   : 1.5% 1%;
+    transition: all .3s ease;
   }
 
   &.a {
-    flex-basis       : 100%;
-    // order         : 1;
-    flex-direction   : column-reverse;
+    flex-basis    : 100%;
+    flex-direction: column-reverse;
+    position      : fixed;
+    top           : 0;
 
     .gallery-image {
-      max-height: 95vh;
+      max-height: 90vh;
       object-fit: scale-down;
+      width     : auto;
     }
 
+    .gallery-heading {
+      color     : white;
+      background: color(french_violet);
+    }
   }
 }
 
