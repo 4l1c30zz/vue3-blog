@@ -7,7 +7,7 @@
   >
     <div class="post-category is-uppercase">
       <router-link
-        :to="{ name: `blogCategory`, params: { category: post.category.name } }"
+        :to="{ name: `BlogCategory`, params: { category: post.category.name } }"
       >
         {{ post.category.name }}
       </router-link>
@@ -24,17 +24,17 @@
           {{ tech }}
         </span>
       </div>
-      <router-link
-      class="button"
-      :to="{ name: `blogSingle`, params: { id: post.id } }"
-      >
-       full txt
-      </router-link>
     </div>
     <h3 class="post-title is-center is-uppercase">{{ post.title }}</h3>
     <div class="post-toolbar flex flex-between">
-      <a class="button" v-if="post.live" :href="post.live">live</a>
-      <a class="button" v-if="post.git" :href="post.git">git</a>
+            <router-link
+      class="button"
+      :to="{ name: `BlogSingle`, params: { id: post.id } }"
+      >
+       full post
+      </router-link>
+      <a class="button" v-if="post.live" :href="post.live" target="_blank">live</a>
+      <a class="button" v-if="post.git" :href="post.git" target="_blank">git</a>
     </div>
   </article>
 </template>
