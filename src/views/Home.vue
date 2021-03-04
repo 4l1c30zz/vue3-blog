@@ -21,38 +21,38 @@
     <div class="column is-full flex flex-start">
       <h2 class="is-uppercase is-full">skills</h2>
       <p class="is-left is-full">
-        <b>{ Frontend:</b><br/>[<b>Common: </b><br />[ HTML, CSS, SCSS, ], JS: <br />[
-        jQuery, Handlebars.js, Anime.js, Axios, Apollo ,Cypress ] Frameworks:
-        <br />[ Vue.js, Vuex] ],
+      <span class="is-bold"> Skills: {</span><br/>
+        &nbsp;<span class="is-bold">Frontend: [</span><br/>
+          &nbsp;&nbsp;<span class="is-bold">Common: [</span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;HTML, CSS, SCSS,<br/>
+          &nbsp;&nbsp;<span class="is-bold">],</span><br/>
+         &nbsp;&nbsp;<span class="is-bold">JS: [</span><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;jQuery,Handlebars.js, Anime.js, Axios, Apollo ,Cypress,<br/>
+          &nbsp;&nbsp;<span class="is-bold">],</span><br/>
+         &nbsp;&nbsp;<span class="is-bold">Frameworks:[</span><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;Vue.js,Vuex<br/>
+        &nbsp;&nbsp;<span class="is-bold">],</span><br/>
+        &nbsp;&nbsp;<span class="is-bold">Backend: [</span><br/>
+         &nbsp;&nbsp;&nbsp;&nbsp;PHP, mySQL, Smarty, Strapi, WordPress <br/>
+        &nbsp;&nbsp;<span class="is-bold">],</span><br/>
+        &nbsp;&nbsp;<span class="is-bold">Design: [</span><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;Figma, Adobe XD, Adobe Photoshop, Adobe Illustrator ],<br/>
+        &nbsp;&nbsp;<span class="is-bold">Misc: [</span><br/>
+         &nbsp;&nbsp;&nbsp;&nbsp;Ubuntu, bash, Git <br/>
+        &nbsp;&nbsp;<span class="is-bold">],</span><br/>
+      <span class="is-bold">}</span>
       </p>
-      <p class="is-left is-full">
-        <b>Backend: </b><br/>[ PHP, mySQL, Smarty, Strapi, ],
-      </p>
-      <p class="is-left is-full">
-        <b>Frameworks:</b><br />[ WordPress ],
-      </p>
-      <p class="is-left is-full">
-        <b>Design: </b><br/>[ Figma, Adobe XD, Adobe Photoshop, Adobe Illustrator ],
-      </p>
-      <p class="is-left is-full">
-        <b> Misc: </b><br/>[Ubuntu, bash, Git ]<br/><b>}</b></p>
     </div>
   </div>
   <div class="flex flex-center blog-wrapper">
     <div class="container flex flex-start">
       <h2 class="is-uppercase is-full">Playground</h2>
-      <postsGrid
-        :posts="this.posts"
-      />
+      <postsGrid :posts="this.posts" />
     </div>
   </div>
-    <div class="flex flex-center container is-fluid">
-    <div class="column is-full flex flex-start">
-      <h2 class="is-uppercase is-full">Some Art</h2>
-        <galleryGrid
-        :galleryItems="homePage?.gallery.items"
-         />
-    </div>
+  <div class="flex flex-center container is-fluid padless">
+    <h2 class="is-uppercase is-full">Some Art</h2>
+    <galleryGrid :galleryItems="homePage?.gallery.items" />
   </div>
 </template>
 <script>

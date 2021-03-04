@@ -1,7 +1,9 @@
 <template>
     <div class="flex flex-center blog-wrapper">
       <div class="container flex flex-start">
-        <h2 class="is-uppercase is-full">Playground</h2>
+        <h1 class="is-uppercase is-full">Blog</h1>
+        <h4 v-if="this.category" class="is-uppercase is-full padless">
+          category: {{this.category}}</h4>
         <postsGrid
         :posts="this.category
         ? this.displayPostsCategory

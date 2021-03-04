@@ -1,6 +1,6 @@
 <template>
   <article
-    class="post column is-three"
+    class="post column is-three is-two-mobile  flex flex-column flex-center"
     v-for="post in posts"
     :ref="setPostRef"
     v-bind:key="post"
@@ -26,7 +26,7 @@
       </div>
     </div>
     <h3 class="post-title is-center is-uppercase">{{ post.title }}</h3>
-    <div class="post-toolbar flex flex-between">
+    <div class="post-toolbar flex flex-between if-full">
             <router-link
       class="button"
       :to="{ name: `BlogSingle`, params: { id: post.id } }"

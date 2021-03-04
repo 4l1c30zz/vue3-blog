@@ -29,9 +29,3 @@ export default {
   },
 };
 </script>
-<style>
-.footer-wrap{
-  max-width: 40wv;
-  margin: 0 auto;
-}
-</style>

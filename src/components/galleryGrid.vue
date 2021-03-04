@@ -1,10 +1,10 @@
 <template>
-  <section class="container flex flex-center gallery_wrap">
+  <section class="container is-fluid padless flex flex-center gallery_wrap flex-stretch ">
     <div class="close" @click="closeGallery">X</div>
-      <div class="arr arr-left" @click="goLeft">LEFT</div>
-      <div class="arr arr-right" @click="goright">RIGHT</div>
+    <div class="arr arr-left" @click="goLeft">LEFT</div>
+    <div class="arr arr-right" @click="goright">RIGHT</div>
     <div
-      class="column is-three gallery"
+      class="column is-three is-two-tablet is-full-mobile gallery flex flex-column flex-stretch"
       v-for="galleryItem in galleryItems"
       :ref="setGalleryRefs"
       v-bind:key="galleryItem"
@@ -15,7 +15,7 @@
         v-if="galleryItem.url"
         :src="env + galleryItem.url"
       />
-      <h4 class="gallery-heading" v-if="galleryItem.caption">
+            <h4 class="gallery-heading bck_black is-white" v-if="galleryItem.caption">
         {{ galleryItem.caption }}
       </h4>
     </div>

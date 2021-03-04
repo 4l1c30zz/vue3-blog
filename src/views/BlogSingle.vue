@@ -6,7 +6,7 @@
     </div>
   </div>
   <div class="container padless is-fluid flex-stretch flex flex-between">
-    <div class="column flex flex-center is-three bck_black is-white">
+    <div class="column flex flex-center is-three is-full-mobile bck_black is-white">
       <div class="flex column is-full flex-center">
         <span class="single-post-category">
           <router-link
@@ -46,7 +46,7 @@
         >
       </div>
     </div>
-    <div class="column is-half flex flex-start is-left">
+    <div class="column is-half is-full-mobile flex flex-start is-left">
       <p
         v-for="cont in splitParagraph(singlePost.content)"
         v-bind:key="cont"
