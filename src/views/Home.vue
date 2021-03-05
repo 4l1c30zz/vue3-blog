@@ -5,15 +5,14 @@
     </div>
     <div class="column is-half hero-paragraph flex flex-start">
       <p class="is-left">
-        My name is Alice, I’m a Tel-Aviv based self-taught creative developer.
+        My name is Alice.
       </p>
       <p class="is-left">
-        Melomaniac with formal music education. Always searching for the best
-        tunes around
+        I'm a self-taught developer that loves bring concepts to life and explore new things :)
       </p>
       <p class="is-left">
-        Ink/paper waster(love sketching, lettering,doodling etc), and casual
-        games player=)
+        Favorite stuff :<br/>
+        experimental music, art, casual games, strong coffee and fresh challenges
       </p>
     </div>
   </div>
@@ -21,26 +20,24 @@
     <div class="column is-full flex flex-start">
       <h2 class="is-uppercase is-full">skills</h2>
       <p class="is-left is-full">
-      <span class="is-bold"> Skills: {</span><br/>
-        &nbsp;<span class="is-bold">Frontend: [</span><br/>
-          &nbsp;&nbsp;<span class="is-bold">Common: [</span><br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;HTML, CSS, SCSS,<br/>
-          &nbsp;&nbsp;<span class="is-bold">],</span><br/>
-         &nbsp;&nbsp;<span class="is-bold">JS: [</span><br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;jQuery,Handlebars.js, Anime.js, Axios, Apollo ,Cypress,<br/>
-          &nbsp;&nbsp;<span class="is-bold">],</span><br/>
-         &nbsp;&nbsp;<span class="is-bold">Frameworks:[</span><br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;Vue.js,Vuex<br/>
-        &nbsp;&nbsp;<span class="is-bold">],</span><br/>
-        &nbsp;&nbsp;<span class="is-bold">Backend: [</span><br/>
-         &nbsp;&nbsp;&nbsp;&nbsp;PHP, mySQL, Smarty, Strapi, WordPress <br/>
-        &nbsp;&nbsp;<span class="is-bold">],</span><br/>
-        &nbsp;&nbsp;<span class="is-bold">Design: [</span><br/>
-          &nbsp;&nbsp;&nbsp;&nbsp;Figma, Adobe XD, Adobe Photoshop, Adobe Illustrator ],<br/>
-        &nbsp;&nbsp;<span class="is-bold">Misc: [</span><br/>
-         &nbsp;&nbsp;&nbsp;&nbsp;Ubuntu, bash, Git <br/>
-        &nbsp;&nbsp;<span class="is-bold">],</span><br/>
-      <span class="is-bold">}</span>
+        <span class="is-bold"> Skills: {</span><br />
+        &nbsp;<span class="is-bold">Frontend: [</span><br />
+        &nbsp;&nbsp;<span class="is-bold">Common: [</span> HTML, CSS, SCSS,
+        <span class="is-bold">],</span><br />
+        &nbsp;&nbsp;<span class="is-bold">JS: [</span>
+        jQuery,Handlebars.js, Anime.js, Axios, Apollo ,Cypress,
+        <span class="is-bold">],</span><br />
+        &nbsp;&nbsp;<span class="is-bold">Frameworks:[</span> Vue.js + Vuex
+        <span class="is-bold">],</span><br />
+        &nbsp;<span class="is-bold">],</span><br />
+        &nbsp;<span class="is-bold">Backend: [</span>
+        PHP, mySQL, Smarty, Strapi, WordPress
+        <span class="is-bold">],</span><br />
+        &nbsp;<span class="is-bold">Design: [</span> Figma, Adobe XD, Adobe
+        Photoshop, Adobe Illustrator <span class="is-bold">],</span><br />
+        &nbsp;<span class="is-bold">Misc: [</span> Ubuntu, bash, Git
+        <span class="is-bold">],</span><br />
+        <span class="is-bold">}</span>
       </p>
     </div>
   </div>
