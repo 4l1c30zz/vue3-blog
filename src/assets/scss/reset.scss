@@ -79,15 +79,16 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  color: inherit;
-  vertical-align: baseline;
+  margin         : 0;
+  padding        : 0;
+  border         : 0;
+  font-size      : 100%;
+  font           : inherit;
+  color          : inherit;
+  vertical-align : baseline;
   text-decoration: none;
-  outline: none;
+  outline        : none;
+  font-family: inherit;
 }
 
 article,
@@ -106,9 +107,14 @@ section {
 
 body {
   line-height: 1;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family:
+    Avenir,
+    Helvetica,
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing : antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color                  : #2c3e50;
 }
 
 ol,
@@ -131,7 +137,7 @@ q:after {
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
+  border-spacing : 0;
 }
 
 img {

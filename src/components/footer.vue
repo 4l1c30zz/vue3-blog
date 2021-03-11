@@ -3,6 +3,7 @@
     <div class="footer-wrap flex flex-center">
     <div class="column flex-start is-full padless">
       <Logo />
+      <a href="mailto:4l1c30zz@gmail.com">4l1c30zz@gmail.com</a>
     </div>
     <div class="footer-toolbar padless column is-full flex flex-between">
       <a href="https://github.com/4l1c30zz/" target="_blank" class="button">
