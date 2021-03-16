@@ -1,8 +1,8 @@
 <template>
-    <div class="flex flex-center blog-wrapper">
+    <div class="flex flex-center blog-wrapper is-white bck_black">
       <div class="container flex flex-start">
         <h1 class="is-uppercase is-full">Blog</h1>
-        <h4 v-if="this.category" class="is-uppercase is-full padless">
+        <h4 v-if="this.category" class="is-uppercase is-full padless is-padding-vertical-5">
           category: {{this.category}}</h4>
         <postsGrid
         :posts="this.category

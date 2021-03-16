@@ -3,6 +3,10 @@ import Axios from 'axios';
 
 const BlogService = {
   async getHome() {
+    Axios.get('https://api.icndb.com/jokes/random')
+      .then((response) => {
+        console.log('Random Chuck Norris fact: ', response.data.value.joke);
+      });
     Axios({
       url: process.env.VUE_APP_GRAPHQL_URL,
       method: 'post',

@@ -1,7 +1,5 @@
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
-
         body {
-          font-size  : 18px;
+          font-size  : 20px;
           line-height: 1.2em;
           overflow-x : hidden;
         }
@@ -20,10 +18,14 @@
               0 0 40px color(hot_pink),
           }
         }
-
         .footer-wrap {
           max-width: 40wv;
           margin   : 0 auto;
+        }
+
+        .mail-link {
+          display: block;
+          padding: 5% 0% 0% 0%;
         }
 
         #app {
@@ -33,8 +35,6 @@
           align-content  : center;
           flex-direction : column;
           justify-content: center;
-          font-family    : 'Poppins',
-            sans-serif;
         }
 
         /*logo*/
@@ -56,7 +56,7 @@
 
         /**/
         /*app header styles*/
-        .header {
+        .nav {
           min-height: 60px;
 
           .router-link-active {
@@ -64,8 +64,8 @@
           }
         }
 
-        .header a {
-          font-size     : 20px;
+        .nav a {
+          font-size     : 1.3rem;
           padding       : 0.5em;
           border-radius : 5%;
           font-weight   : 900;
@@ -95,22 +95,23 @@
           font-weight: 900;
           padding    : 20px;
           line-height: 1.2em;
+          text-align : center;
         }
 
         h1 {
-          font-size: 60px;
+          font-size: 5rem;
         }
 
         h2 {
-          font-size: 50px;
+          font-size: 4rem;
         }
 
         h3 {
-          font-size: 40px;
+          font-size: 3rem;
         }
 
         h4 {
-          font-size: 30px;
+          font-size: 2rem;
         }
 
         p {
@@ -131,6 +132,15 @@
 
         .padless {
           padding: 0
+        }
+
+        .is-padding-vertical-5 {
+          padding-top   : 5%;
+          padding-bottom: 5%;
+        }
+
+        .is-padding-bottom-5 {
+          padding-bottom: 5%;
         }
 
         /*end-container-styles*/
@@ -207,6 +217,10 @@
           font-weight: 900;
         }
 
+        .is-underlined {
+          text-decoration: underline;
+        }
+
         .is-white {
           color: white;
         }
@@ -240,6 +254,7 @@
           padding    : 0.4em;
           background : $gradient1;
           font-weight: bold;
+          font-size  : 0.9rem;
         }
 
         .button {
@@ -249,12 +264,12 @@
           font-weight    : bold;
           flex-grow      : 1;
           flex-shrink    : 1;
-          font-size      : 20px;
           text-transform : uppercase;
           transition     : all 0.5s ease;
           background-size: 100%;
           box-shadow     : none;
           z-index        : 10;
+          text-align     : center;
 
           &:hover {
             background-size: 400%;
@@ -270,7 +285,7 @@
         .hero {
           background: color(raisin_black);
           flex-wrap : nowrap;
-          min-height: 70vh;
+          padding: 7vh 2vw;
         }
 
         .hero .hero-paragraph p {
@@ -284,7 +299,7 @@
 
         /*welcome neon sign styles*/
         .neon-sign {
-          font-size  : 80px;
+          font-size  : 7rem;
           line-height: 1em;
           white-space: pre-line;
           color      : white;
@@ -328,11 +343,6 @@
 
         /*end welcome neon sign styles*/
         /*posts grid style*/
-        .blog-wrapper {
-          background: color(raisin_black);
-          color     : white;
-        }
-
         .post {
           transition: all 0.5s ease;
 
@@ -358,7 +368,7 @@
             position     : relative;
             bottom       : 0;
             font-weight  : 900;
-            font-size    : 25px;
+            font-size    : 1.5 rem;
             margin-bottom: 1em;
             border       : 3px solid white;
             padding      : .5em;
@@ -376,7 +386,6 @@
           .post-title {
             max-width  : 30vw;
             margin     : 0 auto;
-            font-size  : 50px;
             text-shadow: none;
             transform  : none;
             line-height: .8em;
@@ -427,7 +436,7 @@
             cursor     : pointer;
             z-index    : 20;
             position   : fixed;
-            font-size  : 30px;
+            font-size  : 2.5rem;
             font-weight: 900;
             padding    : .35em;
             background : color(hot_pink);
@@ -544,6 +553,11 @@
 
         /*end single post*/
 
+        @media screen and(min-width:1025px) {
+          .mobile-nav-switch {
+            display: none;
+          }
+        }
 
         /*responsive adaptataions*/
         @media screen and (max-width:1200px) {
@@ -562,21 +576,8 @@
             padding: 30px 10px;
           }
 
-          h1,
-          .post .post-title {
-            font-size: 50px;
-          }
-
-          h2 {
-            font-size: 40px;
-          }
-
-          h3 {
-            font-size: 30px;
-          }
-
-          h4 {
-            font-size: 20px;
+          body {
+            font-size: 18px;
           }
 
           /*end fonts*/
@@ -601,39 +602,102 @@
             max-height: 80vh;
             min-height: 320px;
           }
+
+          /*mobile nav*/
+          .mobile-nav-switch {
+            display    : block;
+            color      : color(hot_pink);
+            font-size  : 1.5em;
+            font-weight: 900;
+            cursor     : pointer;
+            transition : all .3s ease-in-out;
+
+            &:after {
+              content       : 'menu';
+              text-transform: uppercase;
+              transition    : all .3s ease-in-out;
+            }
+
+            &:hover {
+              transform: scale(1.1);
+              color    : color(french_violet);
+            }
+
+            &.a {
+              position   : absolute;
+              top        : 38px;
+              right      : 2%;
+              z-index    : 11;
+              text-indent: 0;
+
+              &:after {
+                content    : 'exit';
+                color      : color(jonquil);
+                font-weight: 900;
+                font-size  : 1em;
+              }
+            }
+          }
+
+          .nav {
+            height    : 0;
+            min-height: 0;
+            display   : none;
+            width     : 0;
+            transition: all .5s ease-in-out;
+
+            &.a {
+              display       : flex;
+              flex-direction: column;
+              background    : color(raisin_black);
+              position      : fixed;
+              width         : 100%;
+              left          : 0;
+              top           : 0;
+              padding       : 2vh 0;
+              z-index       : 10;
+              min-height    : 30%
+            }
+          }
+          /*end mobile nav*/
         }
 
         @media screen and (max-width:680px) {
 
           /*fonts*/
-          h1,
-          .post .post-title {
-            font-size: 40px;
+          body {
+            font-size: 16px;
+          }
+
+          h1 {
+            font-size: 4.5rem;
           }
 
           h2 {
-            font-size: 30px;
+            font-size: 3.5rem;
           }
 
           h3 {
-            font-size: 25px;
+            font-size: 3rem;
           }
 
           h4 {
-            font-size: 18px;
+            font-size: 2rem;
+          }
+
+          .neon-sign {
+            font-size: 4rem;
           }
 
           /*end fonts*/
-          .logo {
-            width: 100%;
-          }
 
           .logo-svg {
             max-width: 20vw;
+            min-width: 15vw;
             margin   : auto;
           }
 
-          .header {
+          .nav {
             margin: 0 auto;
           }
 
@@ -647,6 +711,18 @@
 
           .hero {
             flex-wrap: wrap;
+          }
+        }
+
+        @media screen and (max-width:430px) {
+
+          .post .post-title,
+          h1,
+          h2,
+          h3,
+          h4 {
+            max-width    : 80vw;
+            overflow-wrap: break-word;
           }
         }
 

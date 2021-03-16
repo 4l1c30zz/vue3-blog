@@ -1,6 +1,6 @@
 <template>
   <article
-    class="post column is-three is-two-mobile  flex flex-column flex-center"
+    class="post column is-three is-full-mobile  flex flex-column flex-center"
     v-for="post in posts"
     :ref="setPostRef"
     v-bind:key="post"

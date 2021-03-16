@@ -16,7 +16,7 @@
       </p>
     </div>
   </div>
-  <div class="flex flex-center container">
+  <div class="flex flex-center container is-padding-vertical-5">
     <div class="column is-full flex flex-start">
       <h2 class="is-uppercase is-full">skills</h2>
       <p class="is-left is-full">
@@ -41,14 +41,14 @@
       </p>
     </div>
   </div>
-  <div class="flex flex-center blog-wrapper">
+  <div class="flex flex-center is-padding-vertical-5 is-white bck_black">
     <div class="container flex flex-start">
       <h2 class="is-uppercase is-full">Playground</h2>
       <postsGrid :posts="this.posts" />
     </div>
   </div>
-  <div class="flex flex-center container is-fluid padless">
-    <h2 class="is-uppercase is-full">Some Art</h2>
+  <div class="flex flex-center container is-fluid padless is-padding-vertical-5">
+    <h2 class="is-uppercase is-full is-padding-bottom-5">Some Art</h2>
     <galleryGrid :galleryItems="homePage?.gallery.items" />
   </div>
 </template>
