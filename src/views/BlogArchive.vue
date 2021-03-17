@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-center blog-wrapper is-white bck_black">
-      <div class="container flex flex-start">
+      <div class="container flex flex-start post-archive">
         <h1 class="is-uppercase is-full">Blog</h1>
         <h4 v-if="this.category" class="is-uppercase is-full padless is-padding-vertical-5">
           category: {{this.category}}</h4>
