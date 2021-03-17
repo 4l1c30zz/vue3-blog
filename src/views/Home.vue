@@ -43,8 +43,8 @@
   </div>
   <div class="flex flex-center is-padding-vertical-5 is-white bck_black">
     <div class="container flex flex-start">
-      <h2 class="is-uppercase is-full">Playground</h2>
-      <postsGrid :posts="this.posts" />
+      <h2 class="is-uppercase is-full">Play ground</h2>
+      <postsGrid :posts="featuredPosts" />
     </div>
   </div>
   <div class="flex flex-center container is-fluid padless is-padding-vertical-5">
@@ -68,6 +68,13 @@ export default {
       posts: 'getBlog',
       homePage: 'getHomePage',
     }),
+    featuredPosts() {
+      const featuredIds = [1, 2, 3, 5, 6];
+      return this.posts
+        ? this.posts.concat()
+          .filter((post) => featuredIds.some((id) => id.toString() === post.id))
+        : [];
+    },
   },
 };
 </script>
