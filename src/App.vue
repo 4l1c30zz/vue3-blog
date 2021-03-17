@@ -8,7 +8,7 @@ import { mapGetters } from 'vuex';
 import Header from '@/components/header.vue';
 import Footer from '@/components/footer.vue';
 import BlogService from '@/services/BlogService';
-
+// TODO: add a loader
 export default {
   components: {
     Header,

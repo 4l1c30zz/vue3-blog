@@ -1,6 +1,6 @@
 <template>
   <article
-    class="post column is-three is-full-mobile  flex flex-column flex-center"
+    class="post column is-three is-full-mobile flex flex-column flex-center"
     v-for="post in posts"
     :ref="setPostRef"
     v-bind:key="post"
@@ -27,14 +27,19 @@
     </div>
     <h3 class="post-title is-center is-uppercase">{{ post.title }}</h3>
     <div class="post-toolbar flex flex-between if-full">
-            <router-link
-      class="button"
-      :to="{ name: `BlogSingle`, params: { id: post.id } }"
+      <router-link
+        class="button"
+        :to="{ name: `BlogSingle`, params: { id: post.id } }"
       >
-       full post
+        full post
       </router-link>
-      <a class="button" v-if="post.live" :href="post.live" target="_blank">live</a>
+      <a class="button" v-if="post.live" :href="post.live" target="_blank"
+        >live</a
+      >
       <a class="button" v-if="post.git" :href="post.git" target="_blank">git</a>
+      <a class="button" v-if="post.behance" :href="post.behance" target="_blank"
+        >behance</a
+      >
     </div>
   </article>
 </template>

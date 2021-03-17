@@ -1,27 +1,29 @@
 <template>
-  <div class="post-header container is-fluid flex flex-center">
+  <div class="post-header container is-fluid flex flex-center" v-if="singlePost">
     <img class="post-image" :src="env + singlePost.image.url" />
     <div class="post-header-content bck_black is-white">
       <h1 class="is-uppercase">{{ singlePost.title }}</h1>
     </div>
   </div>
   <div class="container padless is-fluid flex-stretch flex flex-between">
-    <div class="column flex flex-center is-three is-full-mobile bck_black is-white">
+    <div
+      class="column flex flex-center is-three is-full-mobile bck_black is-white"
+    >
       <div class="flex column is-full flex-center">
         <span class="single-post-category">
           <router-link
             :to="{
               name: `BlogCategory`,
-              params: { category: singlePost.category.name },
+              params: { category: singlePost?.category.name },
             }"
           >
-            {{ singlePost.category.name }}
+            {{ singlePost?.category.name }}
           </router-link></span
         >
       </div>
       <div class="flex column is-full flex-center">
         <span
-          v-for="tech in splitSentence(singlePost.tech)"
+          v-for="tech in splitSentence(singlePost?.tech)"
           v-bind:key="tech"
           :ref="setTechRef"
           class="tag"
@@ -31,24 +33,31 @@
       </div>
       <div class="flex column is-full flex-between">
         <a
-          v-if="singlePost.git"
+          v-if="singlePost?.git"
           class="button"
           :href="singlePost.git"
           target="_blank"
           >github</a
         >
         <a
-          v-if="singlePost.live"
+          v-if="singlePost?.live"
           class="button"
-          :href="singlePost.live"
+          :href="singlePost?.live"
           target="_blank"
           >Live</a
+        >
+        <a
+          class="button"
+          v-if="singlePost?.behance"
+          :href="singlePost?.behance"
+          target="_blank"
+          >behance</a
         >
       </div>
     </div>
     <div class="column is-half is-full-mobile flex flex-start is-left">
       <p
-        v-for="cont in splitParagraph(singlePost.content)"
+        v-for="cont in splitParagraph(singlePost?.content)"
         v-bind:key="cont"
         :ref="setContRef"
       >
@@ -59,7 +68,7 @@
 </template>
 <script>
 import { mapGetters } from 'vuex';
-
+// TODO: add posts inner nav
 export default {
   props: ['id'],
   data() {
@@ -77,7 +86,7 @@ export default {
       const single = this.posts
         ? this.posts.filter((post) => post.id === this.id)
         : [];
-      return single[0];
+      return single ? single[0] : [];
     },
   },
   methods: {
