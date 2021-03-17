@@ -3,7 +3,7 @@
     <Logo />
     <span class="mobile-nav-switch" @click="toggleNav">
     </span>
-    <div id="nav" class="nav flex flex-between">
+    <div id="nav" class="nav flex flex-between" @click="closeNav">
       <router-link to="/">Home</router-link>
       <router-link to="/blog">Blog</router-link>
         <router-link to="/blog/category/javascript">javascript</router-link>
@@ -21,10 +21,14 @@ export default {
   },
   methods: {
     toggleNav(e) {
-      const navigitionElem = document.getElementById('nav');
-      navigitionElem.classList.toggle('a');
-      e.target.classList.toggle('a');
-      console.log('e', e.target);
+      e.target.parentElement.classList.toggle('a');
+    },
+    closeNav(e) {
+      const parent = e.target.parentElement;
+      if (parent.classList.contains('a')) {
+        parent.classList.remove('a');
+        console.log('nav a');
+      }
     },
   },
 };
