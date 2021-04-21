@@ -2,11 +2,14 @@ import store from '@/store';
 import Axios from 'axios';
 
 const BlogService = {
-  async getHome() {
+  getChuckNorrisJoke() {
     Axios.get('https://api.icndb.com/jokes/random')
       .then((response) => {
         console.log('Random Chuck Norris fact: ', response.data.value.joke);
       });
+  },
+  async getHome() {
+    this.getChuckNorrisJoke();
     Axios({
       url: process.env.VUE_APP_GRAPHQL_URL,
       method: 'post',
