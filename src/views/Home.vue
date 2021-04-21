@@ -20,7 +20,7 @@
     <div class="column is-full flex flex-start">
       <h2 class="is-uppercase is-full">skills</h2>
       <p class="is-left is-full">
-        <span class="is-bold"> Skills: {</span><br />
+        <span class="is-bold"> {</span><br />
         &nbsp;<span class="is-bold">Frontend: [</span><br />
         &nbsp;&nbsp;<span class="is-bold">Common: [</span> HTML, CSS, SCSS,
         <span class="is-bold">],</span><br />
