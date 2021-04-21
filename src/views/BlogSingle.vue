@@ -1,5 +1,8 @@
 <template>
-  <div class="post-header container is-fluid flex flex-center" v-if="singlePost">
+  <div
+    class="post-header container is-fluid flex flex-center"
+    v-if="singlePost"
+  >
     <img class="post-image" :src="env + singlePost.image.url" />
     <div class="post-header-content bck_black is-white">
       <h1 class="is-uppercase">{{ singlePost.title }}</h1>
@@ -10,16 +13,15 @@
       class="column flex flex-center is-three is-full-mobile bck_black is-white"
     >
       <div class="flex column is-full flex-center">
-        <span class="single-post-category">
-          <router-link
-            :to="{
-              name: `BlogCategory`,
-              params: { category: singlePost?.category.name },
-            }"
-          >
-            {{ singlePost?.category.name }}
-          </router-link></span
+        <router-link
+          class="single-post-category"
+          :to="{
+            name: `BlogCategory`,
+            params: { category: singlePost?.category.name },
+          }"
         >
+          {{ singlePost?.category.name }}
+        </router-link>
       </div>
       <div class="flex column is-full flex-center">
         <span

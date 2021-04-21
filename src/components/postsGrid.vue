@@ -5,13 +5,12 @@
     :ref="setPostRef"
     v-bind:key="post"
   >
-    <div class="post-category is-uppercase">
-      <router-link
-        :to="{ name: `BlogCategory`, params: { category: post.category.name } }"
-      >
-        {{ post.category.name }}
-      </router-link>
-    </div>
+    <router-link
+      class="post-category is-uppercase"
+      :to="{ name: `BlogCategory`, params: { category: post.category.name } }"
+    >
+      {{ post.category.name }}
+    </router-link>
     <div class="post-content flex flex-center flex-column">
       <img :src="env + post.image.url" class="post-thumbnail" />
       <div class="post-tech flex flex-center">
