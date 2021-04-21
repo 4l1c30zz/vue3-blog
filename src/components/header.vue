@@ -4,10 +4,10 @@
     <span class="mobile-nav-switch" @click="toggleNav">
     </span>
     <div id="nav" class="nav flex flex-between" @click="closeNav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/blog">Blog</router-link>
-        <router-link to="/blog/category/javascript">javascript</router-link>
-       <router-link to="/blog/category/css">css</router-link>
+      <router-link @click="closeNav" to="/">Home</router-link>
+      <router-link @click="closeNav" to="/blog">Blog</router-link>
+        <router-link @click="closeNav" to="/blog/category/javascript">javascript</router-link>
+       <router-link @click="closeNav" to="/blog/category/css">css</router-link>
     </div>
   </header>
 </template>
