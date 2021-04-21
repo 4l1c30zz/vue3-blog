@@ -50,22 +50,25 @@ export default {
     },
     goLeft() {
       const activeItem = document.querySelector('.gallery.a');
-      if (activeItem) {
-        const prev = activeItem.previousSibling;
-        if (prev) {
-          prev.classList.add('a');
-          activeItem.classList.remove('a');
-        }
+      const prev = activeItem?.previousSibling;
+      if (prev && prev.attributes) {
+        prev.classList.add('a');
+        activeItem.classList.remove('a');
+      } else {
+        activeItem.classList.remove('a');
+        const galleryItems = document.querySelectorAll('.gallery');
+        galleryItems[galleryItems.length - 1].classList.add('a');
       }
     },
     goright() {
       const activeItem = document.querySelector('.gallery.a');
-      if (activeItem) {
-        const next = activeItem.nextSibling;
-        if (next) {
-          next.classList.add('a');
-          activeItem.classList.remove('a');
-        }
+      const next = activeItem?.nextSibling;
+      if (next && next.attributes) {
+        next.classList.add('a');
+        activeItem.classList.remove('a');
+      } else {
+        activeItem.classList.remove('a');
+        document.querySelectorAll('.gallery')[0].classList.add('a');
       }
     },
     closeGallery() {
