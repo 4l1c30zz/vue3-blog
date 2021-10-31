@@ -78,9 +78,6 @@
           &:hover {
             transform         : scale(1.1);
             text-shadow       : 0.1rem 0.5rem 2rem color(jonquil);
-            // background: $gradient1;
-            // background-size: 400%;
-            // animation: gradient_flow ease-in 3.3s infinite alternate-reverse;
           }
 
         }
@@ -413,7 +410,6 @@
               text-shadow: 0 .3em .6em color(_turquoise);
               box-shadow : .1em .3em 1em color(hot_pink),
                 inset .1em .1em .5em color(hot_pink);
-              // animation: text-flicker-in-glow 4s linear both
               animation: vibrate-2 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite both;
             }
 
@@ -440,7 +436,7 @@
             position   : fixed;
             font-size  : 2.5rem;
             font-weight: 900;
-            padding    : .35em;
+            padding    : .5em .5em .3em .5em;
             background : color(hot_pink);
             color      : color(raisin_black);
           }
@@ -549,6 +545,7 @@
         .post-image {
           object-fit: cover;
           width     : 100%;
+          max-height: 40vh;
         }
 
         .post-header-content {
@@ -725,9 +722,6 @@
 
           .hero {
             flex-wrap: wrap;
-          }
-          .post-header-content{
-            position: static;
           }
         }
 

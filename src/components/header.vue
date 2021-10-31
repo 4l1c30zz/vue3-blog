@@ -1,13 +1,22 @@
 <template>
-  <header class="flex flex-between">
+  <header class="flex flex-between" >
     <Logo />
-    <span class="mobile-nav-switch" @click="toggleNav">
-    </span>
+    <span class="mobile-nav-switch" @click="toggleNav"> </span>
     <div id="nav" class="nav flex flex-between" @click="closeNav">
-      <router-link @click="closeNav" to="/">Home</router-link>
-      <router-link @click="closeNav" to="/blog">Blog</router-link>
-        <router-link @click="closeNav" to="/blog/category/javascript">javascript</router-link>
-       <router-link @click="closeNav" to="/blog/category/css">css</router-link>
+      <router-link :to="{ name: 'Home' }">
+        <span @click="closeNav"> Home</span>
+        </router-link>
+      <router-link :to="{ name: 'Blog' }">
+        <span @click="closeNav"> Blog</span>
+      </router-link>
+      <router-link
+        :to="{ name: 'BlogCategory', params: { category: 'javascript' } }"
+      >
+        <span @click="closeNav"> javascript</span>
+        </router-link>
+      <router-link :to="{ name: 'BlogCategory', params: { category: 'css' } }">
+        <span @click="closeNav"> css</span>
+        </router-link>
     </div>
   </header>
 </template>
@@ -23,11 +32,10 @@ export default {
     toggleNav(e) {
       e.target.parentElement.classList.toggle('a');
     },
-    closeNav(e) {
-      const parent = e.target.parentElement;
-      if (parent.classList.contains('a')) {
-        parent.classList.remove('a');
-        console.log('nav a');
+    closeNav() {
+      const header = document.getElementsByTagName('header');
+      if (header[0].classList.contains('a')) {
+        header[0].classList.remove('a');
       }
     },
   },
