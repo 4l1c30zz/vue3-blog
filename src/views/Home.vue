@@ -69,10 +69,11 @@ export default {
       homePage: 'getHomePage',
     }),
     featuredPosts() {
-      const featuredIds = [1, 2, 3, 5, 6];
+      const featuredIds = this.homePage
+        ? this.homePage.title_n_posts.articles.map((i) => i.id) : [];
       return this.posts
-        ? this.posts.concat()
-          .filter((post) => featuredIds.some((id) => id.toString() === post.id))
+        ? this.posts
+          .filter((post) => featuredIds.some((id) => id === post.id))
         : [];
     },
   },
